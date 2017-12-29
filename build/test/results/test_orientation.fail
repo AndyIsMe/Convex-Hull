@@ -1,0 +1,40 @@
+---
+:source:
+  :path: test
+  :file: test_orientation.c
+:successes:
+- :test: test_orientation_expect_anticlockwise
+  :line: 7
+  :message: ''
+- :test: test_orientation_expect_clockwise
+  :line: 17
+  :message: ''
+- :test: test_orientation_expect_colinear
+  :line: 27
+  :message: ''
+:failures:
+- :test: test_orientation1
+  :line: 54
+  :message: Expected 6 Was 7
+:ignores: []
+:counts:
+  :total: 4
+  :passed: 3
+  :failed: 1
+  :ignored: 0
+:stdout:
+- result 0
+- result[x] 0
+- result[y] 0
+- result 0
+- result[x] 3
+- result[y] 0
+- result 0
+- result[x] 3
+- result[y] 3
+- result 0
+- result[x] 2
+- result[y] 4
+- result 0
+- result[x] 2
+- result[y] 4
