@@ -12,29 +12,29 @@
 - :test: test_orientation_expect_colinear
   :line: 27
   :message: ''
-:failures:
-- :test: test_orientation1
-  :line: 54
-  :message: Expected 6 Was 7
+- :test: test_orientation2
+  :line: 59
+  :message: ''
+:failures: []
 :ignores: []
 :counts:
   :total: 4
-  :passed: 3
-  :failed: 1
+  :passed: 4
+  :failed: 0
   :ignored: 0
 :stdout:
 - result 0
-- result[x] 0
-- result[y] 0
+- result[x] -2
+- result[y] 1
 - result 0
-- result[x] 3
-- result[y] 0
+- result[x] 8
+- result[y] 5
 - result 0
-- result[x] 3
+- result[x] 8
 - result[y] 3
 - result 0
-- result[x] 2
-- result[y] 4
+- result[x] 8
+- result[y] -3
 - result 0
-- result[x] 2
-- result[y] 4
+- result[x] -1
+- result[y] -4

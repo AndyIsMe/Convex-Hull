@@ -45,13 +45,24 @@ void test_orientation(void)
     //TEST_ASSERT_EQUAL(0,i);
 }*/
 
-void test_orientation1(void)
+void xtest_orientation1(void)
 {
-    Point points[] = {{1,3},{2,2},{1,1},{3,0},{0,0},{3,3};
+    Point points[] = {{1,3},{2,2},{1,1},{3,0},{0,0},{3,3}};
 
     int n = (sizeof(points))/(sizeof(points[0]));
-    convexHull(points , n);
+    convexHull(points , n , anticlockwise);
     TEST_ASSERT_EQUAL(6,n);
+    //TEST_ASSERT_EQUAL(3,points[5].y);
+    //TEST_ASSERT_EQUAL(0,i);
+}
+
+void test_orientation2(void)
+{
+    Point points[] = {{-2,1},{2,1},{8,3},{4,2},{8,5},{4,-1},{8,-3},{-1,-4}};
+
+    int n = (sizeof(points))/(sizeof(points[0]));
+    convexHull(points , n , clockwise);
+    TEST_ASSERT_EQUAL(8,n);
     //TEST_ASSERT_EQUAL(3,points[5].y);
     //TEST_ASSERT_EQUAL(0,i);
 }

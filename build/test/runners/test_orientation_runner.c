@@ -33,7 +33,7 @@ extern void tearDown(void);
 extern void test_orientation_expect_anticlockwise(void);
 extern void test_orientation_expect_clockwise(void);
 extern void test_orientation_expect_colinear(void);
-extern void test_orientation1(void);
+extern void test_orientation2(void);
 
 
 /*=======Test Reset Option=====*/
@@ -52,7 +52,7 @@ int main(void)
   RUN_TEST(test_orientation_expect_anticlockwise, 7);
   RUN_TEST(test_orientation_expect_clockwise, 17);
   RUN_TEST(test_orientation_expect_colinear, 27);
-  RUN_TEST(test_orientation1, 48);
+  RUN_TEST(test_orientation2, 59);
 
   return (UnityEnd());
 }

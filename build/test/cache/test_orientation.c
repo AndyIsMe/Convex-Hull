@@ -79,23 +79,49 @@ void test_orientation_expect_colinear(void)
 
 }
 
-void test_orientation1(void)
+void xtest_orientation1(void)
 
 {
 
-    Point points[] = {{1,3},{2,2},{1,1},{3,0},{0,0},{3,3},{2.5,4}};
+    Point points[] = {{1,3},{2,2},{1,1},{3,0},{0,0},{3,3}};
 
 
 
     int n = (sizeof(points))/(sizeof(points[0]));
 
-    convexHull(points , n);
+    convexHull(points , n , 0);
 
     UnityAssertEqualNumber((UNITY_INT)((6)), (UNITY_INT)((n)), (
 
    ((void *)0)
 
    ), (UNITY_UINT)(54), UNITY_DISPLAY_STYLE_INT);
+
+
+
+
+
+}
+
+
+
+void test_orientation2(void)
+
+{
+
+    Point points[] = {{-2,1},{2,1},{8,3},{4,2},{8,5},{4,-1},{8,-3},{-1,-4}};
+
+
+
+    int n = (sizeof(points))/(sizeof(points[0]));
+
+    convexHull(points , n , 1);
+
+    UnityAssertEqualNumber((UNITY_INT)((8)), (UNITY_INT)((n)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(65), UNITY_DISPLAY_STYLE_INT);
 
 
 

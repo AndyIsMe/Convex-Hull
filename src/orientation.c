@@ -1,6 +1,9 @@
 #include "orientation.h"
 #include <stdio.h>
 
+
+
+
 //return 0 ---> colinear
 //return 1 ---> clockwise
 //return 2 ---> anticlockwise
@@ -16,7 +19,7 @@ int orientation(Point p,Point q,Point r)
     return 0;
 }
 
-void convexHull(Point points[] , int n)
+void convexHull(Point points[] , int n , int choice)
 {
   int i;
   int l = 0;
@@ -49,6 +52,8 @@ void convexHull(Point points[] , int n)
     printf("result[y] %d\n",points[result].y);
 
     // Search for a point q where a validation in function
+    //p = current point
+    //q = next targer point
     // orientation(p, x, q) is done and to be make sure that
     // it is counterclockwise for all points 'x'.
     // The idea is to keep track of last visited outermost point
@@ -58,8 +63,14 @@ void convexHull(Point points[] , int n)
     q = (p+1)%n;
     for(i = 0;i < n;i++)
       {
-        if(orientation(points[p],points[i],points[q])==2)
+        if(choice = 1){
+          if(orientation(points[p],points[i],points[q])==1)
           q = i;
+        }
+        else if(choice = 0){
+          if(orientation(points[p],points[i],points[q])==2)
+          q = i;
+        }
       }
       // After valiation of point q as the outermost point in anticlockwise
       // Let p = q as for the next joining outermost point
