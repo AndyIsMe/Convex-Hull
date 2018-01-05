@@ -1,0 +1,43 @@
+---
+:source:
+  :path: test
+  :file: test_orientation.c
+:successes:
+- :test: test_orientation_expect_anticlockwise
+  :line: 12
+  :message: ''
+- :test: test_orientation_expect_clockwise
+  :line: 22
+  :message: ''
+- :test: test_orientation_expect_colinear
+  :line: 32
+  :message: ''
+:failures:
+- :test: test_orientation
+  :line: 61
+  :message: Expected 'GentingKlang' Was 'PV12'
+:ignores: []
+:counts:
+  :total: 4
+  :passed: 3
+  :failed: 1
+  :ignored: 0
+:stdout:
+- count 0
+- "[x] 0"
+- "[y] 0"
+- place GentingKlang
+- count 1
+- "[x] 0"
+- "[y] 3"
+- place PV12
+- count 2
+- "[x] 3"
+- "[y] 3"
+- place WangsaMaju
+- count 3
+- "[x] 3"
+- "[y] 0"
+- place BlockD
+- z1 6790984
+- z 6790960
