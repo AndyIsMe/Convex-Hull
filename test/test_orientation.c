@@ -81,20 +81,6 @@ void test_6_random_coordinates_expect_starting_Genting_Klang_Jarvis_anticlockwis
 
 }
 
-void test_6_random_coordinates_expect_no_shape_formed(void)
-{
-    initN(&pointPv12,0,3);
-    initN(&pointPv15,2,2);
-    Point start[]={pointPv12,pointPv15};
-
-    int n = (sizeof(start))/(sizeof(start[0]));
-    Point *end = (convexHull(start , n , clockwise));
-
-    TEST_ASSERT_EQUAL(2,n);
-    //TEST_ASSERT_EQUAL_POINT(0,3,"PV12",end);
-    //TEST_ASSERT_EQUAL_POINT(2,2,"PV15",end+1);
-
-}
 
 void test_8_random_coordinates_expect_starting_Pv12_Jarvis_anticlockwise_ending_Genting_Klang(void)
 {

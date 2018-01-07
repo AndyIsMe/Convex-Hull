@@ -1,0 +1,83 @@
+---
+:source:
+  :path: test
+  :file: test_orientation.c
+:successes:
+- :test: test_orientation_expect_anticlockwise
+  :line: 13
+  :message: ''
+- :test: test_orientation_expect_clockwise
+  :line: 23
+  :message: ''
+- :test: test_orientation_expect_colinear
+  :line: 33
+  :message: ''
+- :test: test_6_random_coordinates_expect_starting_Pv12_Jarvis_clockwise_ending_BlockD
+  :line: 43
+  :message: ''
+- :test: test_6_random_coordinates_expect_starting_Genting_Klang_Jarvis_anticlockwise_ending_PV12
+  :line: 63
+  :message: ''
+- :test: test_8_random_coordinates_expect_starting_Pv12_Jarvis_anticlockwise_ending_Genting_Klang
+  :line: 85
+  :message: ''
+:failures: []
+:ignores: []
+:counts:
+  :total: 6
+  :passed: 6
+  :failed: 0
+  :ignored: 0
+:stdout:
+- count 0
+- "[x] 0"
+- "[y] 0"
+- place Genting Klang
+- count 1
+- "[x] 0"
+- "[y] 3"
+- place PV12
+- count 2
+- "[x] 3"
+- "[y] 3"
+- place WangsaMaju
+- count 3
+- "[x] 3"
+- "[y] 0"
+- place Block D
+- count 0
+- "[x] 0"
+- "[y] 0"
+- place Genting Klang
+- count 1
+- "[x] 3"
+- "[y] 0"
+- place Block D
+- count 2
+- "[x] 3"
+- "[y] 3"
+- place WangsaMaju
+- count 3
+- "[x] 1"
+- "[y] 3"
+- place PV12
+- count 0
+- "[x] -2"
+- "[y] 1"
+- place PV12
+- count 1
+- "[x] -1"
+- "[y] -4"
+- place Block B
+- count 2
+- "[x] 8"
+- "[y] -3"
+- place Block A
+- count 3
+- "[x] 8"
+- "[y] 3"
+- place TARUC
+- count 4
+- "[x] 8"
+- "[y] 5"
+- place Genting Klang

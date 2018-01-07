@@ -181,38 +181,6 @@ void test_6_random_coordinates_expect_starting_Genting_Klang_Jarvis_anticlockwis
 
 
 
-void test_6_random_coordinates_expect_no_shape_formed(void)
-
-{
-
-    initN(&pointPv12,0,3);
-
-    initN(&pointPv15,2,2);
-
-    Point start[]={pointPv12,pointPv15};
-
-
-
-    int n = (sizeof(start))/(sizeof(start[0]));
-
-    Point *end = (convexHull(start , n , 1));
-
-
-
-    UnityAssertEqualNumber((UNITY_INT)((2)), (UNITY_INT)((n)), (
-
-   ((void *)0)
-
-   ), (UNITY_UINT)(93), UNITY_DISPLAY_STYLE_INT);
-
-    testAssertEqualNode(0,3,"PV12",end,94);
-
-
-
-
-
-}
-
 
 
 void test_8_random_coordinates_expect_starting_Pv12_Jarvis_anticlockwise_ending_Genting_Klang(void)
@@ -249,16 +217,16 @@ void test_8_random_coordinates_expect_starting_Pv12_Jarvis_anticlockwise_ending_
 
    ((void *)0)
 
-   ), (UNITY_UINT)(114), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(100), UNITY_DISPLAY_STYLE_INT);
 
-    testAssertEqualNode(-2,1,"PV12",end,115);
+    testAssertEqualNode(-2,1,"PV12",end,101);
 
-    testAssertEqualNode(-1,-4,"Block B",end+1,116);
+    testAssertEqualNode(-1,-4,"Block B",end+1,102);
 
-    testAssertEqualNode(8,-3,"Block A",end+2,117);
+    testAssertEqualNode(8,-3,"Block A",end+2,103);
 
-    testAssertEqualNode(8,3,"TARUC",end+3,118);
+    testAssertEqualNode(8,3,"TARUC",end+3,104);
 
-    testAssertEqualNode(8,5,"Genting Klang",end+4,119);
+    testAssertEqualNode(8,5,"Genting Klang",end+4,105);
 
 }
