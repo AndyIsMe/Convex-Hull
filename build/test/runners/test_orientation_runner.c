@@ -33,7 +33,10 @@ extern void tearDown(void);
 extern void test_orientation_expect_anticlockwise(void);
 extern void test_orientation_expect_clockwise(void);
 extern void test_orientation_expect_colinear(void);
-extern void test_orientation(void);
+extern void test_6_random_coordinates_expect_starting_Pv12_Jarvis_clockwise_ending_BlockD(void);
+extern void test_6_random_coordinates_expect_starting_Genting_Klang_Jarvis_anticlockwise_ending_PV12(void);
+extern void test_6_random_coordinates_expect_no_shape_formed(void);
+extern void test_8_random_coordinates_expect_starting_Pv12_Jarvis_anticlockwise_ending_Genting_Klang(void);
 
 
 /*=======Test Reset Option=====*/
@@ -49,10 +52,13 @@ void resetTest(void)
 int main(void)
 {
   UnityBegin("test_orientation.c");
-  RUN_TEST(test_orientation_expect_anticlockwise, 12);
-  RUN_TEST(test_orientation_expect_clockwise, 22);
-  RUN_TEST(test_orientation_expect_colinear, 32);
-  RUN_TEST(test_orientation, 32);
+  RUN_TEST(test_orientation_expect_anticlockwise, 13);
+  RUN_TEST(test_orientation_expect_clockwise, 23);
+  RUN_TEST(test_orientation_expect_colinear, 33);
+  RUN_TEST(test_6_random_coordinates_expect_starting_Pv12_Jarvis_clockwise_ending_BlockD, 43);
+  RUN_TEST(test_6_random_coordinates_expect_starting_Genting_Klang_Jarvis_anticlockwise_ending_PV12, 63);
+  RUN_TEST(test_6_random_coordinates_expect_no_shape_formed, 84);
+  RUN_TEST(test_8_random_coordinates_expect_starting_Pv12_Jarvis_anticlockwise_ending_Genting_Klang, 99);
 
   return (UnityEnd());
 }

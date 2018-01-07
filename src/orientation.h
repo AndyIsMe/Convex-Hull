@@ -10,7 +10,7 @@ struct Point
 {
   int x,y;
   char *place;
-  double data;
+  //double data;
 };
 
 int orientation(Point p,Point q,Point r);

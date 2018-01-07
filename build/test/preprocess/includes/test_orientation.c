@@ -2,4 +2,5 @@
 - unity.h
 - orientation.h
 - nodehelper.h
+- nodeverifier.h
 - build/temp/_test_orientation.c

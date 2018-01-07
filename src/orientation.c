@@ -26,15 +26,11 @@ int orientation(Point p,Point q,Point r)
 
 Point *convexHull(Point points[] , int n , int choice)
 {
-  double x , y;
+  int x , y;
   int i;
   int l = 0;
-  //int result = 0;
   Point result[1001];
-  int j;
   //Making sure that there must be at least 3 points
-  //if(n < 3)
-  //return ;
 
   //Search for the leftmost point
   for(i = 1 ; i < n ; i++)
@@ -56,24 +52,22 @@ Point *convexHull(Point points[] , int n , int choice)
   {
     for(i=0;i<n-1;i++)
     {
-      //points[i]
+      result[count] = points[i];
     }
+    printf("n is %d , which is smaller than 3\n",n);
+    printf("Therefore , there will shape formed\n");
+
   }
   else
   {
   do {
     // Store current point to the result
     result[count] = points[p];
-    points[p].data = p;
-    //printf("p[x] %d\n",points[p].x);
-    //printf("p[y] %d\n",points[p].y);
-    //printf("place %s\n",points[p].place);
     printf("count %d\n",count);
     printf("[x] %d\n",result[count].x);
     printf("[y] %d\n",result[count].y);
     printf("place %s\n",result[count].place);
     count++;
-
 
     // Search for a point q where a validation in function
     //p = current point
@@ -101,9 +95,6 @@ Point *convexHull(Point points[] , int n , int choice)
       p = q;
   } while(p != l);
   int z = &(result[0]);
-  int z1 = &(result[1]);
-  printf("z1 %d\n",z1 );
-  printf("z %d\n",z );
   return z;
 }
 }
