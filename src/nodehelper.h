@@ -4,7 +4,25 @@
 #include <stdint.h>
 
 Point pointPv12,pointPv15,pointTaruc,pointBlockD,pointGK,pointWangsa\
-      ,pointBlockA,pointBlockB,pointBlockC,pointBlockE;
+      ,pointKajang,pointCheras,pointTamanMelawati,pointGombak,pointDangWangi\
+      ,pointAmpangPark,pointKLCC,pointMasjidJamek\
+      ,pointSriRampai
+      ,pointSetiawangsa
+      ,pointJelatek
+      ,pointDK
+      ,pointDamai
+      ,pointKB
+      ,pointPS
+      ,pointKLS
+      ,pointBangsar
+      ,pointAH
+      ,pointKerinchi
+      ,pointUniversiti
+      ,pointTJ
+      ,pointAJ
+      ,pointTP
+      ,pointTB
+      ,pointKJ;
 
 void initN(Point *points,int x,int y);
 void initNnode(void);

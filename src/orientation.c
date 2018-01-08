@@ -1,12 +1,6 @@
 #include "orientation.h"
 #include <stdio.h>
-
-
-/*int distance(Point p , Point q,Point r)
-{
-  int val = sqrt((q.x-p.x)*(q.x-p.x)+(q.y-p.y)*(q.y-p.y));
-  return val;
-}*/
+#include <malloc.h>
 
 
 //return 0 ---> collinear
@@ -29,8 +23,7 @@ Point *convexHull(Point points[] , int n , int choice)
   int x , y;
   int i;
   int l = 0;
-  Point result[1001];
-  //Making sure that there must be at least 3 points
+  Point *result = (Point*)malloc(sizeof(Point) * 1001);
 
   //Search for the leftmost point
   for(i = 1 ; i < n ; i++)
@@ -38,16 +31,18 @@ Point *convexHull(Point points[] , int n , int choice)
     if(points[l].x>points[i].x)
       l = i;
     else if((points[l].x==points[i].x)&&(points[l].y>points[i].y))
-    l = i;
+      l = i;
   }
   //Begin at the leftmost point
- //Keep joining points in anticlockwise direction
-//until starting point
-//This loop runs n times
-//n = number of points user placed into it
+  //Keep joining points in clockwise/anticlockwise direction
+ //until starting point
+ //This loop runs n times
+ //n = number of points user placed into it
   int p = l;
   int q;
   int count = 0;
+  //Making sure that there must be at least 3 points
+
   if(n<3)
   {
     for(i=0;i<n-1;i++)
@@ -55,7 +50,7 @@ Point *convexHull(Point points[] , int n , int choice)
       result[count] = points[i];
     }
     printf("n is %d , which is smaller than 3\n",n);
-    printf("Therefore , there will shape formed\n");
+    printf("Therefore , there will be no shape formed\n");
 
   }
   else
@@ -63,10 +58,10 @@ Point *convexHull(Point points[] , int n , int choice)
   do {
     // Store current point to the result
     result[count] = points[p];
-    printf("count %d\n",count);
-    printf("[x] %d\n",result[count].x);
-    printf("[y] %d\n",result[count].y);
-    printf("place %s\n",result[count].place);
+    //printf("count %d\n",count);
+    //printf("[x] %d\n",result[count].x);
+    //printf("[y] %d\n",result[count].y);
+    //printf("place %s\n",result[count].place);
     count++;
 
     // Search for a point q where a validation in function
@@ -81,22 +76,26 @@ Point *convexHull(Point points[] , int n , int choice)
     q = (p+1)%n;
     for(i = 0;i < n;i++)
       {
-        if(choice == 1){
+        if(choice == clockwise)
+        {
           if(orientation(points[p],points[i],points[q])==1)
           q = i;
         }
-        else if(choice == 0){
+        else if(choice == anticlockwise)
+        {
           if(orientation(points[p],points[i],points[q])==2)
           q = i;
         }
       }
-      // After valiation of point q as the outermost point in anticlockwise
+      // After valiation of point q as the outermost point in either clockwise/anticlockwise
       // Let p = q as for the next joining outermost point
       p = q;
-  } while(p != l);
-  int z = &(result[0]);
-  return z;
+    } while(p != l);
+  //As long as current point != initial point [p!=l]
+  // It will keep searching for the next outer most left point as the next connection point
+  return result;
 }
+  return result;
 }
 
 /*

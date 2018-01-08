@@ -4,80 +4,43 @@
   :file: test_orientation.c
 :successes:
 - :test: test_orientation_expect_anticlockwise
-  :line: 13
+  :line: 14
   :message: ''
 - :test: test_orientation_expect_clockwise
-  :line: 23
+  :line: 24
   :message: ''
 - :test: test_orientation_expect_colinear
-  :line: 33
+  :line: 34
   :message: ''
-- :test: test_6_random_coordinates_expect_starting_Pv12_Jarvis_clockwise_ending_BlockD
-  :line: 43
+- :test: test_6_random_coordinates_after_Jarvis_algorithm_expect_starting_Pv12_clockwise_ending_BlockD
+  :line: 64
   :message: ''
-- :test: test_6_random_coordinates_expect_starting_Genting_Klang_Jarvis_anticlockwise_ending_PV12
-  :line: 63
+- :test: test_6_random_coordinates_after_Jarvis_algorithm_expect_starting_Genting_Klang_anticlockwise_ending_PV12
+  :line: 105
   :message: ''
-- :test: test_8_random_coordinates_expect_starting_Pv12_Jarvis_anticlockwise_ending_Genting_Klang
-  :line: 85
+- :test: test_8_random_coordinates_after_Jarvis_algorithm_expect_starting_Pv12_anticlockwise_ending_Genting_Klang
+  :line: 145
+  :message: ''
+- :test: test_10_random_coordinates_after_Jarvis_algorithm_expect_starting_BlockD_clockwise_ending_Pv12
+  :line: 189
+  :message: ''
+- :test: test_13_random_coordinates_after_Jarvis_algorithm_expect_starting_MJ_clockwise_ending_TM
+  :line: 245
+  :message: ''
+- :test: test_13_random_coordinates_after_Jarvis_algorithm_expect_starting_MJ_anticlockwise_ending_WM
+  :line: 295
+  :message: ''
+- :test: test_30_random_coordinates_after_Jarvis_algorithm_expect_starting_MJ_anticlockwise_ending_WM
+  :line: 362
+  :message: ''
+- :test: test_5_random_coordinates_after_Jarvis_algorithm_expect_starting_Pv12_clockwise_ending_BlockD
+  :line: 418
   :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 6
-  :passed: 6
+  :total: 11
+  :passed: 11
   :failed: 0
   :ignored: 0
-:stdout:
-- count 0
-- "[x] 0"
-- "[y] 0"
-- place Genting Klang
-- count 1
-- "[x] 0"
-- "[y] 3"
-- place PV12
-- count 2
-- "[x] 3"
-- "[y] 3"
-- place WangsaMaju
-- count 3
-- "[x] 3"
-- "[y] 0"
-- place Block D
-- count 0
-- "[x] 0"
-- "[y] 0"
-- place Genting Klang
-- count 1
-- "[x] 3"
-- "[y] 0"
-- place Block D
-- count 2
-- "[x] 3"
-- "[y] 3"
-- place WangsaMaju
-- count 3
-- "[x] 1"
-- "[y] 3"
-- place PV12
-- count 0
-- "[x] -2"
-- "[y] 1"
-- place PV12
-- count 1
-- "[x] -1"
-- "[y] -4"
-- place Block B
-- count 2
-- "[x] 8"
-- "[y] -3"
-- place Block A
-- count 3
-- "[x] 8"
-- "[y] 3"
-- place TARUC
-- count 4
-- "[x] 8"
-- "[y] 5"
-- place Genting Klang
+:stdout: []
